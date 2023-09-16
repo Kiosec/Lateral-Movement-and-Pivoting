@@ -14,10 +14,11 @@
 ``` ```
 ## Psexec
 
-Ports: 445/TCP (SMB)
-Required Group Memberships: Administrators
-Part of sysinternals 
+- Ports: 445/TCP (SMB)
+- Required Group Memberships: Administrators
+- Part of sysinternals 
 
+#### Commands
 ```
 psexec64.exe \\MACHINE_IP -u Administrator -p Mypass123 -i cmd.exe
 ```
@@ -26,8 +27,8 @@ psexec64.exe \\MACHINE_IP -u Administrator -p Mypass123 -i cmd.exe
 ``` ```
 ## Remote Process Creation Using WinRM
 
-Ports: 5985/TCP (WinRM HTTP) or 5986/TCP (WinRM HTTPS)
-Required Group Memberships: Remote Management Users
+- Ports: 5985/TCP (WinRM HTTP) or 5986/TCP (WinRM HTTPS)
+- Required Group Memberships: Remote Management Users
 
 #### Using winrs.exe :
 ```
@@ -59,11 +60,11 @@ Invoke-Command -Computername TARGET -Credential $credential -ScriptBlock {whoami
 ``` ```
 ## Remotely Creating Services Using sc
 
-Ports:
-135/TCP, 49152-65535/TCP (DCE/RPC)
-445/TCP (RPC over SMB Named Pipes)
-139/TCP (RPC over SMB Named Pipes)
-Required Group Memberships: Administrators
+- Ports:
+  -  135/TCP, 49152-65535/TCP (DCE/RPC)
+  - 445/TCP (RPC over SMB Named Pipes)
+  - 139/TCP (RPC over SMB Named Pipes)
+- Required Group Memberships: Administrators
 
 #### 1. create and start a service named "SERVICENAME" using the following commands:
 ```
