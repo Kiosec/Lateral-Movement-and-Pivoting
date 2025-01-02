@@ -11,7 +11,7 @@
 * [4. Creating Scheduled Tasks Remotely](#Creating-Scheduled-Tasks-Remotely)
 
 ##### ➤ Windows - Pass the hash
-* [1. Passing the hash method](#Passing-the-hash-method)
+* [1. PTh - Passing the hash methods](#pth---pass-the-hash-methods)
 
 ``` ```
 ``` ```
