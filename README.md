@@ -109,6 +109,8 @@ schtasks /S TARGET /TN "MYTASK" /DELETE /F
 ``` ```
 ## PTH - Pass the hash methods
 
+Article : https://www.hackingarticles.in/lateral-movement-pass-the-hash-attack/
+
 ##### ➤  PTH-winexe
 
 Install
