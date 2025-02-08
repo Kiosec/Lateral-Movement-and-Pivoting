@@ -181,9 +181,14 @@ apt-get install sshuttle
 
 ##### ➤  Usage
 ```
-# Generate the pivot
+# Generate the pivot using ssh password
 # sshuttle -vr <compromised-user>@<compromised-ip-machine-used-to-pivoting> <internal-subnet-targetted>
-sshuttle -vr root@10.0.0.1 172.1.0.0/16
+sshuttle -vr root@10.0.0.1 172.1.0.0/16 <172.2.0.0/16 ...>
+
+# Generate the pivot using ssh key
+sshuttle -vr root@10.0.0.1 -e 'ssh -i /home/attackeruser/.ssh/id_rsa' 172.1.0.0/16 <172.2.0.0/16 ...>
+
+Note: Be careful to use the correct previously generated id_rsa. The user location is /home/username/.ssh/id_rsa but for the root user is /root/.ssh.id_rsa
 
 #Execute command from kali another kali shell
 nmap -sn 172.16.0.0/16 -Pn
