@@ -182,7 +182,7 @@ apt-get install sshuttle
 ##### ➤  Usage
 ```
 # Generate the pivot
-# sshuttle -vr <compromised-user@<compromised-ip-machine-used-to-pivoting> <internal-subnet-targetted>
+# sshuttle -vr <compromised-user>@<compromised-ip-machine-used-to-pivoting> <internal-subnet-targetted>
 sshuttle -vr root@10.0.0.1 172.1.0.0/16
 
 #Execute command from kali another kali shell
